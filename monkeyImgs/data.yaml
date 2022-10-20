@@ -1,0 +1,5 @@
+train: D:/AA-SANYUKTAA/Self_Projects/Practice_yolov5_monkey/monkeyImgs/train/images
+val: D:/AA-SANYUKTAA/Self_Projects/Practice_yolov5_monkey/monkeyImgs/valid/images
+
+nc: 1
+names: ['monkey']
