@@ -1,5 +1,5 @@
-train: D:/AA-SANYUKTAA/Self_Projects/Practice_yolov5_monkey/monkeyImgs/train/images
-val: D:/AA-SANYUKTAA/Self_Projects/Practice_yolov5_monkey/monkeyImgs/valid/images
+train: /content/Monkey-detection-and-signalling-using-Yolo-v5/monkeyImgs/train/images
+val: /content/Monkey-detection-and-signalling-using-Yolo-v5/monkeyImgs/valid/images
 
 nc: 1
 names: ['monkey']
