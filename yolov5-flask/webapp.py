@@ -46,4 +46,4 @@ if __name__ == "__main__":
 
 
     model.eval()
-    app.run(host="0.0.0.0", port=args.port)  # debug=True causes Restarting with stat
+    app.run(host="0.0.0.0", port=args.port) 
