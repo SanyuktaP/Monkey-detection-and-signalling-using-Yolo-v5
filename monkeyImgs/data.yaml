@@ -1,5 +1,0 @@
-train: /content/Monkey-detection-and-signalling-using-Yolo-v5/monkeyImgs/train/images
-val: /content/Monkey-detection-and-signalling-using-Yolo-v5/monkeyImgs/valid/images
-
-nc: 1
-names: ['monkey']
