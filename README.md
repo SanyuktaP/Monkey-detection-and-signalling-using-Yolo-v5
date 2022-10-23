@@ -18,3 +18,9 @@ conda activate venv/
 ```bash
 pip3 install r requirements.txt
 ```
+
+### Step 4: Run the training and testing file on my repo
+###### This will train on yolov5-l model 
+
+### Step 5 : Now create a flask app
+###### Do the required changes in the webapp.py 
