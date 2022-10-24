@@ -26,13 +26,15 @@ def predict():
 
         img_bytes = file.read()
         img = Image.open(io.BytesIO(img_bytes))
+        model = torch.hub.load(r'yolov5', 'custom', path=r'best.pt', source='local', force_reload=True)
         results = model([img])
 
         results.render()  # updates results.imgs with boxes and labels
         results.save()
-        image_dir = 'runs/detect'
+        image_dir = './runs/detect/'
         last_folder = sorted(pathlib.Path(image_dir).glob('*/'), key=os.path.getmtime)[-1]
-        return send_file(f"{last_folder}/image0.jpg")
+        print("last_folder: ", last_folder)
+        return send_file(f"../{last_folder}/image0.jpg")
 
     return render_template("index.html")
 
@@ -42,8 +44,6 @@ if __name__ == "__main__":
     parser.add_argument("--port", default=5000, type=int, help="port number")
     args = parser.parse_args()
 
-    model = torch.hub.load(r'D:\AA-SANYUKTAA\Projects\Monkey-detection-and-signalling-using-Yolo-v5\yolov5', 'custom', path=r'D:\AA-SANYUKTAA\Projects\Monkey-detection-and-signalling-using-Yolo-v5\yolov5\runs\train\yolov5l_output2\weights\best.pt', source='local')
 
-
-    model.eval()
-    app.run(host="0.0.0.0", port=args.port) 
+    #model.eval()
+    app.run(host="0.0.0.0", port=args.port, debug=False)  # debug=True causes Restarting with stat
