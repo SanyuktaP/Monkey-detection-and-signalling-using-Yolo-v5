@@ -9,4 +9,6 @@ RUN pip install -r requirements.txt
 
 EXPOSE $PORT
 
-CMD ["python", "yolov5-flask/webapp.py", "--port=5011"]
+#CMD ["python", "yolov5-flask/webapp.py", "--port=5011"]
+
+CMD gunicorn --workers=4 --bind 0.0.0.0:$PORT webapp:app
