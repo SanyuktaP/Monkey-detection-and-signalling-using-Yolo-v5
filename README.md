@@ -19,8 +19,27 @@ conda activate venv/
 pip3 install r requirements.txt
 ```
 
-### Step 4: Run the training and testing file on my repo
-###### This will train on yolov5-l model 
+### Step 4: Already trained from Yolov5 -l model- Can directly use the best.pt for you detection purpose. 
+##### Else whole process is coded in Monkey_Detection.ipynb
 
-### Step 5 : Now create a flask app
-###### Do the required changes in the webapp.py 
+### Step 5 : Now create a flask app with desired ui
+run using:
+```bash
+python appname.py
+```
+
+### Step 6 : Dockerize the files and then create a ci/cd pipeline and deploy it in heroku.
+
+### For Client api:
+```bash
+python restapi.py --port 5556
+```
+```bash
+curl -X POST -F image=@monkey2.jpg http://127.0.0.1:5556
+```
+
+### Heroku app links:
+#### For Image detection:  https://monkey-detect-yolov5-image.herokuapp.com/
+#### For video Detection:  https://monkey-detect-yolov5-video.herokuapp.com/
+
+
