@@ -1,26 +1,7 @@
-# Monkey-detection-and-signalling-using-Yolo-v5
-
-
-### Step 1: Clone my repo
+### For Client api:
 ```bash
-git clone https://github.com/SanyuktaP/Monkey-detection-and-signalling-using-Yolo-v5.git
-```
-### Step 2: Create Conda environment
-
-```bash
-conda create -p venv python==3.7.6 -y
+python restapi.py --port 5556
 ```
 ```bash
-conda activate venv/
-```
-
-### Step 3: Install the requirements
-```bash
-pip3 install r requirements.txt
-```
-
-
-### Step 4: Run the app.py
-```bash
-python3 yolov5-flask/app.py --port 5000
+curl -X POST -F image=@monkey2.jpg http://127.0.0.1:5556
 ```
